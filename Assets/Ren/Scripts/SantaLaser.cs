@@ -1,5 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Properties;
+using UnityEditor;
 using UnityEngine;
 
 public class SantaLaser : MonoBehaviour {
@@ -12,30 +14,39 @@ public class SantaLaser : MonoBehaviour {
     [Header("Configurations")]
     public float laserpower;
     public float turnSpeed;
+    bool laserToggled;
 
     [Header("Prefabs")]
-    public GameObject laser;
+    //public GameObject laser;
+
+    [Header("Materials")]
+    public Material blackEyeMat;
+    public Material redEyeMat;
 
     // Gamecomponents
     Transform headTF;
     Transform hatTF;
     Transform playerTF;
+    Animator anim;
 
     void Start() {
+        // Call components
         headTF = head.GetComponent<Transform>();
         hatTF = hat.GetComponent<Transform>();
         playerTF = player.GetComponent<Transform>();
+        anim = GetComponent<Animator>();
+
+        // Reset Variables
+        laserToggled = false;
     }
 
     void Update() {
-        
-    }
+        // Stare at player
+        headTF.LookAt(player.transform);
 
-    protected void rotateTowards(Vector3 to) {
-
-        Quaternion _lookRotation =
-            Quaternion.LookRotation(playerTF.position);
-
-        headTF.transform.rotation = _lookRotation;
+        // laser player
+        if (Input.GetKeyDown(KeyCode.L)) {
+            laserToggled = true;
+        }
     }
 }
