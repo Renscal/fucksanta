@@ -335,6 +335,111 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 140488114}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &280389024
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 280389028}
+  - component: {fileID: 280389027}
+  - component: {fileID: 280389026}
+  - component: {fileID: 280389025}
+  m_Layer: 0
+  m_Name: Cube
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!65 &280389025
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 280389024}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &280389026
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 280389024}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &280389027
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 280389024}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &280389028
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 280389024}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -7.01, y: 1.29, z: 47.92}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &434209138
 GameObject:
   m_ObjectHideFlags: 0
@@ -553,6 +658,7 @@ GameObject:
   - component: {fileID: 865170894}
   - component: {fileID: 865170893}
   - component: {fileID: 865170892}
+  - component: {fileID: 865170895}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -730,20 +836,20 @@ MonoBehaviour:
   staminaBar: {fileID: 0}
   sprintSoundSpeed: 0.1
   canJump: 1
-  jumpHeight: 2
-  gravitationalForce: 10
+  jumpHeight: 1.7
+  gravitationalForce: 19.6
   jumpVelocity: {x: 0, y: 0, z: 0}
-  canPlayerCrouch: 0
-  isCrouchHold: 0
+  canPlayerCrouch: 1
+  isCrouchHold: 1
   crouchedHeight: 1
   crouchedSpeed: 1
-  crouchSoundPlayTime: 0
-  slidingSpeed: 0
+  crouchSoundPlayTime: 0.1
+  slidingSpeed: 8
   slidingDuration: 0
   isCursorLocked: 1
   cameraFollow: {fileID: 963194228}
   playerVirtualCamera: {fileID: 0}
-  mouseSensitivity: 6
+  mouseSensitivity: 8
   maximumClamp: 0
   minimumClamp: 0
   sprintFOV: 62.3
@@ -751,7 +857,7 @@ MonoBehaviour:
   enableZoom: 0
   isZoomingHold: 0
   zoomFOV: 30
-  canHeadBob: 0
+  canHeadBob: 1
   headBobAmplitude: 0.01
   headBobFrequency: 18.5
   grassTag: 
@@ -770,8 +876,8 @@ MonoBehaviour:
   jumpingAudioClip: {fileID: 0}
   slidingAudioClip: {fileID: 0}
   footstepSensitivity: 0
-  canPush: 0
-  pushLayersID: 0
+  canPush: 1
+  pushLayersID: 6
   pushStrength: 1.1
   interactionLayersID: 0
   interactionRange: 0
@@ -872,6 +978,35 @@ AudioSource:
     m_PostInfinity: 2
     m_RotationOrder: 4
 --- !u!114 &865170894
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 865170884}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6fd9027d004d8ef42a87424e7f401565, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxTouchLimit: 10
+  touchDetectionMode: 0
+  isSprintingHold: 0
+  isSprintingTapped: 0
+  isCrouchingHold: 0
+  isCrouchingTapped: 0
+  moveDirection: {x: 0, y: 0}
+  mouseDirection: {x: 0, y: 0}
+  haveJumped: 0
+  isZoomingHold: 0
+  isZoomingTapped: 0
+  isFiringHold: 0
+  isFiringTapped: 0
+  isReloading: 0
+  isAimingHold: 0
+  isAimingTapped: 0
+  isTryingToInteract: 0
+--- !u!114 &865170895
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1229,7 +1364,7 @@ MonoBehaviour:
   eye1: {fileID: 65286885}
   eye2: {fileID: 1284962270}
   hat: {fileID: 1197164578}
-  player: {fileID: 0}
+  player: {fileID: 865170884}
   laserpower: 0
   turnSpeed: 10
   laser: {fileID: 0}
@@ -1470,3 +1605,4 @@ SceneRoots:
   - {fileID: 1624678194}
   - {fileID: 865170888}
   - {fileID: 1930869874}
+  - {fileID: 280389028}

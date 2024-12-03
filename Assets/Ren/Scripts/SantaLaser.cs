@@ -34,11 +34,8 @@ public class SantaLaser : MonoBehaviour {
     protected void rotateTowards(Vector3 to) {
 
         Quaternion _lookRotation =
-            Quaternion.LookRotation((playerTF.position - headTF.position).normalized);
+            Quaternion.LookRotation(playerTF.position);
 
-        transform.rotation =
-            Quaternion.Slerp(transform.rotation, _lookRotation, Time.deltaTime * turnSpeed);
-
-        // transform.rotation = _lookRotation;
+        headTF.transform.rotation = _lookRotation;
     }
 }
