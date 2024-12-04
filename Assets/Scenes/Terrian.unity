@@ -1638,6 +1638,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 8324a4441b67c224c84b60eff2111b89, type: 3}
       insertIndex: -1
       addedObject: {fileID: 506924412}
+    - targetCorrespondingSourceObject: {fileID: 4167280743394806330, guid: 8324a4441b67c224c84b60eff2111b89, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2056961926}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8324a4441b67c224c84b60eff2111b89, type: 3}
 --- !u!4 &759870263 stripped
@@ -1706,6 +1709,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 2bf2e0507b3902d43978787df3b5783f, type: 3}
   m_PrefabInstance: {fileID: 761016512}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &786968665 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4167280743394806330, guid: 8324a4441b67c224c84b60eff2111b89, type: 3}
+  m_PrefabInstance: {fileID: 741830800}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &830140225
 PrefabInstance:
@@ -3555,7 +3563,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1890190339}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 64d3f955d8561fc408c232979fc935fb, type: 3}
   m_Name: 
@@ -3567,7 +3575,7 @@ MonoBehaviour:
   doReload: 0
   reloadTime: 1
   magText: {fileID: 170972000}
-  shootSound: {fileID: 8300000, guid: 3f794cda63354604f95df4b725f0a520, type: 3}
+  shootSound: {fileID: 8300000, guid: 2e2918a1c9e6eb44ebd8a38f3a609fe7, type: 3}
   muzzleFlash: {fileID: 3462045170895841792, guid: c3d4c73ae26d3ab44843f39a32f1fc6f, type: 3}
   muzzlePos: {fileID: 506924412}
 --- !u!82 &1890190352
@@ -3819,6 +3827,62 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2722194799151559686, guid: d77134faad0374731919e090ca04c7ca, type: 3}
   m_PrefabInstance: {fileID: 1828300366}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2056961925
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2056961926}
+  - component: {fileID: 2056961927}
+  m_Layer: 0
+  m_Name: BulletSpawn
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2056961926
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2056961925}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.0062, z: -0.739}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 786968665}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2056961927
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2056961925}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ce952b1576a34149b7269f53c861dec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bullet: {fileID: 6361586935549888891, guid: 11a58915d39cadf48823e35fcef4e7b3, type: 3}
+  bulletspeed: 20
+  fireRate: 0.1
+  damage: 10
+  currentMag: 30
+  maxMag: 30
+  doReload: 0
+  reloadTime: 1
+  magText: {fileID: 170972000}
+  shootSound: {fileID: 8300000, guid: 2e2918a1c9e6eb44ebd8a38f3a609fe7, type: 3}
+  muzzleFlash: {fileID: 3462045170895841792, guid: c3d4c73ae26d3ab44843f39a32f1fc6f, type: 3}
+  muzzlePos: {fileID: 506924412}
 --- !u!1001 &2066890606
 PrefabInstance:
   m_ObjectHideFlags: 0
