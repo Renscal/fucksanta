@@ -14,7 +14,6 @@ public class SantaLaser : MonoBehaviour {
     [Header("Configurations")]
     public float laserpower;
     public float turnSpeed;
-    bool laserToggled;
 
     [Header("Prefabs")]
     //public GameObject laser;
@@ -35,18 +34,10 @@ public class SantaLaser : MonoBehaviour {
         hatTF = hat.GetComponent<Transform>();
         playerTF = player.GetComponent<Transform>();
         anim = GetComponent<Animator>();
-
-        // Reset Variables
-        laserToggled = false;
     }
 
     void Update() {
         // Stare at player
         headTF.LookAt(player.transform);
-
-        // laser player
-        if (Input.GetKeyDown(KeyCode.L)) {
-            laserToggled = true;
-        }
     }
 }
