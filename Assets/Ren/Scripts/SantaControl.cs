@@ -11,6 +11,7 @@ public class SantaControl : MonoBehaviour
     private SantaLaser laser;
     private LineRenderer left;
     private LineRenderer right;
+    public AudioClip laserlyd;
 
     // Start is called before the first frame update
     void Start()
@@ -37,6 +38,9 @@ public class SantaControl : MonoBehaviour
         yield return new WaitForSeconds(timeInactive);
 
         laser.enabled = true;
+
+        GetComponent<AudioSource>().PlayOneShot(laserlyd);
+
 
         left.enabled = true; right.enabled = true; 
        
