@@ -27,6 +27,9 @@ public class PlayerHealth : MonoBehaviour
         if (currentHealth <= 0)
         {
             GameManager.Instance.isPlayerDead = true;
+            {
+
+            }
         }
     }
 }
