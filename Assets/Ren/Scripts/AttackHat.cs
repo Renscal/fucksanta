@@ -7,19 +7,19 @@ public class AttackHat : MonoBehaviour {
     public GameObject attackHat;
     public GameObject santaHat;
 
-    [Header("Configureations")]
+    [Header("Configurations")]
     public float attackInterval;
 
     //Gamecomponents
     Transform santaHatTF;
     Transform attackHatTF;
     Animator attackHatAnim;
-    Transform attackHatDadTF;
 
 
     void Start() {
         santaHatTF = santaHat.GetComponent<Transform>();
         attackHatTF = attackHat.GetComponent<Transform>();
+        attackHatAnim = attackHat.GetComponent<Animator>();
 
 
         Reset();
@@ -27,7 +27,7 @@ public class AttackHat : MonoBehaviour {
 
     void Update() {
         if (Input.GetKeyDown(KeyCode.O)) {
-            
+            attackHatAnim.SetTrigger("Attack");
         }
     }
 
