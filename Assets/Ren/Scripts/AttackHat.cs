@@ -20,23 +20,15 @@ public class AttackHat : MonoBehaviour {
         santaHatTF = santaHat.GetComponent<Transform>();
         attackHatTF = attackHat.GetComponent<Transform>();
         attackHatAnim = attackHat.GetComponent<Animator>();
-
-
-        Reset();
     }
 
     void Update() {
         if (Input.GetKeyDown(KeyCode.O)) {
+            santaHat.SetActive(false);
+            attackHat.SetActive(true);
+            attackHatTF.position = new Vector3(4.58297f, 55.9905f, 20.66323f);
+            attackHatTF.rotation = new Quaternion(0, santaHatTF.rotation.y, 0, 0);
             attackHatAnim.SetTrigger("Attack");
         }
-    }
-
-    private void Reset() {
-        attackHat.SetActive(true);
-
-        attackHatTF.position = new Vector3(4.58297f, 55.9905f, 20.66323f);
-        attackHatTF.rotation = new Quaternion(0, 0, 0, 0);
-
-        attackHat.SetActive(false);
     }
 }

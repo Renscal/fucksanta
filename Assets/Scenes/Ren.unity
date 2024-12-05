@@ -1082,8 +1082,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a8c684cf4fd29534f9dfc03ba0f1cd4f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackHat: {fileID: 0}
-  santaHat: {fileID: 0}
+  attackHat: {fileID: 1438046783}
+  santaHat: {fileID: 575032983}
   attackInterval: 0
 --- !u!4 &905475715
 Transform:
@@ -1528,7 +1528,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a486022d11a7d214299bcf92d8c7b31a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.5829697
+      value: 4.58297
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a486022d11a7d214299bcf92d8c7b31a, type: 3}
       propertyPath: m_LocalPosition.y
