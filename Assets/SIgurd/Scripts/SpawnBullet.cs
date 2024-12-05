@@ -9,7 +9,7 @@ public class SpawnBullet : MonoBehaviour
 {
     public GameObject bullet;
     public float bulletspeed = 20;
-
+    public float destroytime = 1;
     // Start is called before the first frame update
     Transform camTransform;
 
@@ -54,7 +54,7 @@ public class SpawnBullet : MonoBehaviour
             //skub bullet
             newbullet.GetComponent<Rigidbody>().velocity = transform.forward * bulletspeed;
 
-            Destroy(newbullet, 5f);
+            Destroy(newbullet, destroytime);
 
             /*RaycastHit hit;
             if (Physics.Raycast(camTransform.position, camTransform.forward, out hit, Mathf.Infinity))
