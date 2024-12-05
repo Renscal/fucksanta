@@ -65,5 +65,9 @@ public class SantaLaser : MonoBehaviour {
         // Stare at player
         Vector3 lookDirecion = player.transform.position - headTF.position;
         headTF.rotation = Quaternion.Slerp(head.transform.rotation, Quaternion.LookRotation(lookDirecion.normalized), turnSpeed * Time.deltaTime);
+        {
+          
+
+        }
     }
 }
