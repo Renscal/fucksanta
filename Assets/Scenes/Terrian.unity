@@ -2525,6 +2525,14 @@ PrefabInstance:
       propertyPath: laserDamping
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5433333824174373963, guid: e747548219587e6469200406eeb1497b, type: 3}
+      propertyPath: m_Name
+      value: EyeL
+      objectReference: {fileID: 0}
+    - target: {fileID: 7065495735821018885, guid: e747548219587e6469200406eeb1497b, type: 3}
+      propertyPath: m_Name
+      value: EyeR
+      objectReference: {fileID: 0}
     - target: {fileID: 8346997872299077442, guid: e747548219587e6469200406eeb1497b, type: 3}
       propertyPath: m_LocalPosition.x
       value: 99.75677
@@ -2576,6 +2584,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 8731538379827277331, guid: e747548219587e6469200406eeb1497b, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1835489778}
+    - targetCorrespondingSourceObject: {fileID: 8731538379827277331, guid: e747548219587e6469200406eeb1497b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1835489782}
     - targetCorrespondingSourceObject: {fileID: 7065495735821018885, guid: e747548219587e6469200406eeb1497b, type: 3}
       insertIndex: -1
       addedObject: {fileID: 172310174}
@@ -3746,11 +3757,11 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_audioClip: {fileID: 8300000, guid: a5db7ea28feb0414b9d60dce1c5d5060, type: 3}
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -3832,6 +3843,20 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1835489782
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1835489774}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86194798e8157c34f92eddaacd968b36, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeInactive: 15
+  timeActive: 10
 --- !u!1 &1890190339 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8616685848737228372, guid: c5efc39a8aaf6e64ea40e9ad573e9b47, type: 3}
