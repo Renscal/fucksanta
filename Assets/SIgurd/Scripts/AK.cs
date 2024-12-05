@@ -23,6 +23,10 @@ public class AK : MonoBehaviour
     public AudioClip shootSound;
     public GameObject muzzleFlash;
     public Transform muzzlePos;
+
+    public PlayerAnimator pa;
+
+    public GameObject bulletHole;
     void Start()
     {
         camTransform = Camera.main.transform;
@@ -38,6 +42,7 @@ public class AK : MonoBehaviour
             GetComponent<AudioSource>().PlayOneShot(shootSound);
             lastTimefired = 0;
             currentMag--;
+            pa.DoShootAnim();
             GameObject par = Instantiate(muzzleFlash, muzzlePos);
             par.transform.localEulerAngles = new Vector3 (0f, 180, 0f);
             muzzleFlash.GetComponent<ParticleSystem>().Play();
@@ -48,6 +53,14 @@ public class AK : MonoBehaviour
                 if(hit.collider.GetComponent<Enemy>())
                 {
                     hit.collider.GetComponent<Enemy>().TakeDamage(damage);
+                }
+                else
+                {
+                    GameObject hole = Instantiate(bulletHole, hit.point, Quaternion.identity);
+                    hole.transform.forward = hit.normal;
+                    Vector3 offset = hit.normal * 0.01f;
+                    hole.transform.position += offset;
+                    Destroy(hole, 5);
                 }
             }
         }
