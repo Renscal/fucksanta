@@ -1083,6 +1083,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackHat: {fileID: 1438046783}
+  attackHatDad: {fileID: 905475713}
   santaHat: {fileID: 575032983}
   attackInterval: 0
 --- !u!4 &905475715
