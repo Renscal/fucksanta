@@ -13,6 +13,7 @@ public class Kamikaze : MonoBehaviour {
 
     [Header("Configurations")]
     public float speed;
+    public float damage = 20;
     bool dead;
 
     Vector3 playerCoords;
@@ -46,6 +47,7 @@ public class Kamikaze : MonoBehaviour {
 
     private void OnTriggerEnter(Collider other) {
         if (other.tag == "Player" && dead == false) {
+            other.GetComponent<PlayerHealth>().TakeDamage(damage);
             particles1.Play();
             particles2.Play();
             visualBody.SetActive(false);
