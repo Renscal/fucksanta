@@ -1081,6 +1081,18 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1890190339}
+    - target: {fileID: 3514224952663628038, guid: 388acb3baf065c34886348f4149c2dfc, type: 3}
+      propertyPath: laserlyd
+      value: 
+      objectReference: {fileID: 8300000, guid: a5db7ea28feb0414b9d60dce1c5d5060, type: 3}
+    - target: {fileID: 3514224952663628038, guid: 388acb3baf065c34886348f4149c2dfc, type: 3}
+      propertyPath: timeActive
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3514224952663628038, guid: 388acb3baf065c34886348f4149c2dfc, type: 3}
+      propertyPath: timeInactive
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 4625562134395506144, guid: 388acb3baf065c34886348f4149c2dfc, type: 3}
       propertyPath: m_LocalPosition.x
       value: 101.52345
@@ -1121,9 +1133,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5077040848263136625, guid: 388acb3baf065c34886348f4149c2dfc, type: 3}
+      propertyPath: m_Positions.Array.data[0].x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077040848263136625, guid: 388acb3baf065c34886348f4149c2dfc, type: 3}
+      propertyPath: m_Positions.Array.data[1].x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5389566250999139505, guid: 388acb3baf065c34886348f4149c2dfc, type: 3}
       propertyPath: m_Name
-      value: Santa Variant 1
+      value: Santa
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2347,7 +2367,6 @@ MonoBehaviour:
   m_DeselectOnBackgroundClick: 1
   m_PointerBehavior: 0
   m_CursorLockBehavior: 0
-  m_ScrollDeltaPerTick: 6
 --- !u!4 &992389354 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2722194799151559686, guid: d77134faad0374731919e090ca04c7ca, type: 3}
@@ -2777,7 +2796,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8997996947095583982, guid: c5efc39a8aaf6e64ea40e9ad573e9b47, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 88.44
+      value: 69.73
       objectReference: {fileID: 0}
     - target: {fileID: 8997996947095583982, guid: c5efc39a8aaf6e64ea40e9ad573e9b47, type: 3}
       propertyPath: m_LocalRotation.w

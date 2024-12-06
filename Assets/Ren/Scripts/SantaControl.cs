@@ -41,7 +41,6 @@ public class SantaControl : MonoBehaviour
 
         GetComponent<AudioSource>().PlayOneShot(laserlyd);
 
-
         left.enabled = true; right.enabled = true; 
        
 
