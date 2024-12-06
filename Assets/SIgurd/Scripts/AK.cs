@@ -10,7 +10,7 @@ public class AK : MonoBehaviour
     Transform camTransform;
 
     public float fireRate = 0.1f;
-    public float damage = 20;
+    public int damage = 20;
 
     public float currentMag =30;
     public float maxMag = 30;
@@ -53,6 +53,12 @@ public class AK : MonoBehaviour
                 if(hit.collider.GetComponent<Enemy>())
                 {
                     hit.collider.GetComponent<Enemy>().TakeDamage(damage);
+                }
+                else if (hit.collider.GetComponent<SantaHealth>()) {
+                    hit.collider.GetComponent<SantaHealth>().TakeDamage(damage);
+                }
+                else if (hit.collider.GetComponent<SantaHealth>()) {
+                    hit.collider.GetComponent<SantaHealth>().TakeDamageEye(damage*2);
                 }
                 else
                 {
