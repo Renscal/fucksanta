@@ -57,6 +57,9 @@ public class AK : MonoBehaviour
                 else if (hit.collider.GetComponent<SantaHealth>()) {
                     hit.collider.GetComponent<SantaHealth>().TakeDamage(damage);
                 }
+                else if (hit.collider.GetComponent<SantaHealth>()) {
+                    hit.collider.GetComponent<SantaHealth>().TakeDamageEye(damage*2);
+                }
                 else
                 {
                     GameObject hole = Instantiate(bulletHole, hit.point, Quaternion.identity);
