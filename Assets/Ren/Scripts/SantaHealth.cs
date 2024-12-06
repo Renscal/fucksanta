@@ -12,4 +12,8 @@ public class SantaHealth : MonoBehaviour {
     void Update() {
         
     }
+
+    public void TakeDamage(int damage) {
+
+    }
 }
