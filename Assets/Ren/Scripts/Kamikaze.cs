@@ -41,7 +41,7 @@ public class Kamikaze : MonoBehaviour {
         if(dead == false) {
             playerCoords = new Vector3(playerTR.position.x, TR.position.y, playerTR.position.z);
             TR.LookAt(playerCoords);
-            TR.Translate(0, 0, speed * Time.deltaTime);
+            TR.Translate(0, 0, Random.Range(speed, speed += 0.01f) * Time.deltaTime);
         }
     }
 
