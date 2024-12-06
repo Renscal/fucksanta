@@ -1123,7 +1123,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5389566250999139505, guid: 388acb3baf065c34886348f4149c2dfc, type: 3}
       propertyPath: m_Name
-      value: Santa Variant 1
+      value: Santa
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
