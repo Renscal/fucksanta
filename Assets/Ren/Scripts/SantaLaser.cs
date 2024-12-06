@@ -33,14 +33,14 @@ public class SantaLaser : MonoBehaviour {
 
     // Gamecomponents
     Transform headTF;
-    //Transform hatTF;
+    Transform hatTF;
     Transform playerTF;
     Animator anim;
 
     void Start() {
         // Call components
         headTF = head.GetComponent<Transform>();
-        //hatTF = hat.GetComponent<Transform>();
+        hatTF = hat.GetComponent<Transform>();
         playerTF = player.GetComponent<Transform>();
         anim = GetComponent<Animator>();
         chasePosition = new Vector3(86, 0, 57);
@@ -70,11 +70,6 @@ public class SantaLaser : MonoBehaviour {
         {
           
 
-        }
-
-        if (Input.GetKeyDown(KeyCode.P))
-        {
-            print(chasePosition);
         }
 
     }
