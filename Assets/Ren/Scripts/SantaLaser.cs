@@ -33,16 +33,17 @@ public class SantaLaser : MonoBehaviour {
 
     // Gamecomponents
     Transform headTF;
-    Transform hatTF;
+    //Transform hatTF;
     Transform playerTF;
     Animator anim;
 
     void Start() {
         // Call components
         headTF = head.GetComponent<Transform>();
-        hatTF = hat.GetComponent<Transform>();
+        //hatTF = hat.GetComponent<Transform>();
         playerTF = player.GetComponent<Transform>();
         anim = GetComponent<Animator>();
+        chasePosition = new Vector3(86, 0, 57);
     }
 
     void Update() {
@@ -62,6 +63,7 @@ public class SantaLaser : MonoBehaviour {
                 player.GetComponent<PlayerHealth>().TakeDamage(2);
             }
         }
+
         // Stare at player
         Vector3 lookDirecion = player.transform.position - headTF.position;
         headTF.rotation = Quaternion.Slerp(head.transform.rotation, Quaternion.LookRotation(lookDirecion.normalized), turnSpeed * Time.deltaTime);
@@ -69,5 +71,11 @@ public class SantaLaser : MonoBehaviour {
           
 
         }
+
+        if (Input.GetKeyDown(KeyCode.P))
+        {
+            print(chasePosition);
+        }
+
     }
 }
