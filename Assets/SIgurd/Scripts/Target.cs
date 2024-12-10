@@ -15,9 +15,18 @@ public class Target : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        float yRotation = HeadTF.localEulerAngles.y;
+
+        transform.localEulerAngles = new Vector3(transform.localEulerAngles.x, yRotation, transform.localEulerAngles.z);
+
+        
+
         if (Input.GetKeyDown(KeyCode.P))
         {
             print(HeadTF.rotation.y);
+
+            
+
         }
     }
 }
