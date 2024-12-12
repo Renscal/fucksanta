@@ -10,6 +10,9 @@ public class PlayerHealth : MonoBehaviour
     public float maxHealth = 100;
 
     public TextMeshProUGUI healthText;
+
+    float timeHitByHat = 5;
+    float lastTimeHit = 0;
     void Start()
     {
         currentHealth = maxHealth;
@@ -19,7 +22,7 @@ public class PlayerHealth : MonoBehaviour
     void Update()
     {
         healthText.text = $"Health: {currentHealth}";
-
+        lastTimeHit += Time.deltaTime;
     }
     public void TakeDamage(float dmg)
     {
@@ -30,6 +33,14 @@ public class PlayerHealth : MonoBehaviour
             {
 
             }
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.tag == "SantaHat" && lastTimeHit >= timeHitByHat)
+        {
+            TakeDamage(25);
         }
     }
 }
