@@ -35,6 +35,9 @@ public class Kamikaze : MonoBehaviour {
         particles2 = explotion2.GetComponent<ParticleSystem>();
         fuseParticles = fuse.GetComponent<ParticleSystem>();
     }
+    private void Awake() {
+        player = GameObject.FindGameObjectWithTag("Player");
+    }
 
     // Update is called once per frame
     void Update() {
