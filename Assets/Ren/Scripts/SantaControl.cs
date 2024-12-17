@@ -25,6 +25,8 @@ public class SantaControl : MonoBehaviour
     public float hatTrackTime = 5;
     public float hatSlamDunkTime = 0.15f;
     public float hatSpeed = 10;
+    //public float hatStartTime =3;
+    public float hatPauseTime =3;
 
 
     // Start is called before the first frame update
@@ -43,19 +45,19 @@ public class SantaControl : MonoBehaviour
         target.SetActive(false);
 
         StartCoroutine(LaserStyring());
+        StartCoroutine(HatAttack());
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.P))
-        {
-            StartCoroutine(HatAttack());
-        }
+        
     }
 
     IEnumerator HatAttack()
     {
+        yield return new WaitForSeconds(hatPauseTime);
+
         Transform hatParent = hat.transform.parent;
         hat.transform.parent = null;
         // Hat up
@@ -114,6 +116,8 @@ public class SantaControl : MonoBehaviour
             }
             hat.transform.localPosition = localHatPos;
         }
+
+        StartCoroutine(HatAttack());
     }
 
     IEnumerator LaserStyring()
@@ -133,6 +137,7 @@ public class SantaControl : MonoBehaviour
 
 
         left.enabled = false; right.enabled = false;
+
         if(FindAnyObjectByType<SantaHealth>().isDead == false)
         {
             target.SetActive(false);
